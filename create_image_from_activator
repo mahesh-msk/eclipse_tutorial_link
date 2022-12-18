@@ -1,0 +1,20 @@
+In Activator
+
+private ResourceManager  = resourceManager;
+
+//constructor
+public Activaror(){
+resourceManager = new LocalResourceManager(JFaceResources.getResources());
+}
+public ResourceManagergetResourceManager(){
+return resourceManager;
+}
+public static ImageDescriptor getImageDescriptor(final String file){
+final URL url = FileLocator.find(getDefault().getBundle(), new  Path(file),null);
+return ImageDescriptor.createFromURL(url);
+}
+
+
+In caller
+public Image getImage(){
+return Activator.getDefault().getResourceManager().createImage(Activator.getImageDescriptor(""icons/file.gif));
