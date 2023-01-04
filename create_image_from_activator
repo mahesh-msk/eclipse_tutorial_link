@@ -1,6 +1,6 @@
 In Activator
 
-private ResourceManager  = resourceManager;
+private ResourceManager  resourceManager;
 
 //constructor
 public Activaror(){
